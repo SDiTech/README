@@ -1,10 +1,6 @@
 # Python
-
-## Abstract
-
-This section will illustrate the preferred method for setting up a local development environment for Python. The contained methods rely upon __pyenv__ for simplified multiple Python version installation management and __pipenv__ for dependency tracking/graphing which may be subject to limited availablility for specific operating systems.
-
 ## Contents
+- [Abstract](#abstract)
 - [Getting Started](#getting-started)
     1. [Pyenv](#pyenv)
         - [Dependencies](#pyenv-dependencies)
@@ -14,6 +10,10 @@ This section will illustrate the preferred method for setting up a local develop
         - [Shell Configuration](#pyenv-shell-environment)
         - [Python Installation](#pyenv-python-installation)
     2. [Pipenv](#pipenv)
+
+## Abstract
+
+This section will illustrate the preferred method for setting up a local development environment for Python. The contained methods rely upon __pyenv__ for simplified management of multiple installed Python versions and __pipenv__ for dependency tracking/graphing which may be subject to limited availablility for specific operating systems.
 
 ## Getting Started
 
@@ -112,5 +112,4 @@ Pipenv is installed via the Python Package Index (PyPI) and the built-in `pip` t
 #!/usr/bin/env bash
 
 pip install pipenv
-
 ```
