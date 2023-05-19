@@ -37,7 +37,8 @@ Optionally, it may be preferred to:
     - disallow password login
     - enable certificate authentication
     - (?) disallow challenge response authentication
-    - limit user session instances
+    - (?) limit user session instances
+    - (?) additional options
 - configure a firewall or similar services (firewalld, ufw, pf, fail2ban, etc...)
 
 #### Client Requirements
@@ -88,14 +89,14 @@ Additional server configuration may be necessary, though before proceeding it is
     # 4) (?) disallow challenge response authentication
     ChallengeResponseAuthentication no
 
-    # 5) limit user sessions
+    # 5) (?) limit user sessions
     # defaults:
     # MaxSessions 10
     # MaxStartups 10:30:100
     MaxSessions 5
     MaxStartups 10:30:60
 
-    # 6) additional interesting options
+    # 6) (?) additional options
     # X11Forwarding yes
     # ...
 
