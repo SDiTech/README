@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "*"
+numpy = "*"
+scipy = "*"
+matplotlib = "*"
+ipython = "*"
+beautifulsoup4 = "*"
+requests = "*"
+openpyxl = "*"
+html5lib = "*"
+scrapy = "*"
+django = "*"
+django-rest-framework = "*"
+sqlalchemy = "*"
+flask = "*"
+pre-commit = "*"
+fastapi = "*"
+redis-om = "*"
+tabulate = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
