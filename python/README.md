@@ -2,14 +2,14 @@
 ## Contents
 - [Abstract](#abstract)
 - [Getting Started](#getting-started)
-    1. [Pyenv](#pyenv)
+    1. [pyenv](#pyenv)
         - [Dependencies](#pyenv-dependencies)
         - [Installation](#pyenv-installation)
             - [Automatic Install](#pyenv-automatic-installation)
             - [Github Install](#pyenv-github-installation)
         - [Shell Configuration](#pyenv-shell-environment)
         - [Python Installation](#pyenv-python-installation)
-    2. [Pipenv](#pipenv)
+    2. [pipenv](#pipenv)
 
 ## Abstract
 
@@ -17,12 +17,12 @@ This section will illustrate the preferred method for setting up a local develop
 
 ## Getting Started
 
-### Pyenv
+### pyenv
 
 Getting started with pyenv is pretty straight-forward. See the [Github Repository](https://github.com/pyenv/pyenv) or the [Project Wiki](https://github.com/pyenv/pyenv/wiki#suggested-build-environment) for more information.
 
 
-#### Pyenv Dependencies
+#### pyenv Dependencies
 
 If scripts are not provided for your distribution, refer to the [Project Wiki](https://github.com/pyenv/pyenv/wiki#suggested-build-environment). Otherwise, use the following scriptlets to satisfy pyenv's dependencies:
 ```bash
@@ -40,9 +40,9 @@ dnf install make gcc patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sq
 
 ```
 
-#### Pyenv Installation
+#### pyenv Installation
 
-##### Pyenv Automatic Installation
+##### pyenv Automatic Installation
 
 ```bash
 #!/usr/bin/env bash
@@ -53,7 +53,7 @@ curl https://pyenv.run | bash
 
 <p color="red"><b>Note</b>: curl installation required</p>
 
-##### Pyenv Github Installation
+##### pyenv Github Installation
 
 ```bash
 #!/usr/bin/env bash
@@ -65,7 +65,7 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 cd ~/.pyenv && src/configure && make -C src
 ```
 
-#### Pyenv Shell Environment
+#### pyenv Shell Environment
 
 [Source](https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv)
 
@@ -87,7 +87,7 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ## then restart (shell and/or machine)
 exec "$SHELL"
 ```
-#### Pyenv Python Installation
+#### pyenv Python Installation
 
 Now that pyenv is properly installed and configured, it's time to install Python.
 
@@ -104,9 +104,9 @@ pyenv install 3.11.2
 pyenv global 3.11.2
 ```
 
-### Pipenv
+### pipenv
 
-Pipenv is installed via the Python Package Index (PyPI) and the built-in `pip` tool:
+pipenv is installed via the Python Package Index (PyPI) and the built-in `pip` tool:
 
 ```bash
 #!/usr/bin/env bash
