@@ -22,7 +22,7 @@ This section will outline the general requirements and processes necessary to es
 
 ### OpenSSH
 
-OpenSSH is one of the most commonly recognized providers of SSH Server/Client software. Due to its widespread availability, there may be variations in the software's behavior and are commonly differences involving configuration file locations.
+OpenSSH is one of the most commonly recognized providers of SSH Server/Client software. Due to its widespread availability there may be variations in the software's behavior and are commonly differences involving configuration file locations.
 
 #### Server Requirements
 
@@ -125,6 +125,9 @@ To create and use a new certificate for SSH logins:
 
     # follow the prompt to create a new rsa certificate (with default values)
     ssh-keygen
+
+    # for windows use git bash as it has the ssh-keygen utility installed & use ed25519 unless there is a reason to use rsa 4096 or other alternatives
+    ssh-keygen -f {private-filename} -t {encryption-algorithm}
     ```
 
 2. Confirm proper directory and file permissions:
@@ -136,6 +139,8 @@ To create and use a new certificate for SSH logins:
     # .ssh              (drwx------)    700
     # .ssh/public_key   (-rw-r--r--)    644
     # .ssh/private_key  (-rw-------)    600
+
+    # Windows?
     ```
 
 3. Add a new entry to the client SSH configuration file:
@@ -160,6 +165,12 @@ To create and use a new certificate for SSH logins:
 
     # the -i flag may be used to specify the certificate (without a corresponding ~/.ssh/config entry)
     ssh-copy-id YourUser@RemoteServer
+
+    # on Windows there is no ssh-copy-id so the following workaround is required using powershell
+    type $env:USERPROFILE\.ssh\{private-key}.pub | ssh {IP-OR-FQDN} "cat >> .ssh/authorized_keys"
+
+    # on Windows confirm success with the following
+    ssh {IP-OR-FQDN}
 
     # the remote system WILL PROMPT you for the user's password before transferring the identity file
     ```
